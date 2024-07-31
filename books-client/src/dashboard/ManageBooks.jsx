@@ -6,34 +6,34 @@ const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/all-books")
-      .then(res => res.json())
-      .then(data => {
-        console.log('Fetched data:', data); // Debugging line
+    fetch("https://inventory-management-six-zeta.vercel.app/api/all-books")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data); // Debugging line
         setAllBooks(data);
       })
-      .catch(err => console.error('Error fetching books:', err));
+      .catch((err) => console.error("Error fetching books:", err));
   }, []);
 
   // Delete a book
   const handleDelete = (id) => {
     console.log('Deleting book with ID:', id); // Debugging line
-    fetch(`http://localhost:5000/api/book/${id}`, {
-      method: 'DELETE',
+    fetch(`https://inventory-management-six-zeta.vercel.app/api/book/${id}`, {
+      method: "DELETE",
     })
-    .then(response => {
-      if (response.ok) {
-        setAllBooks(allBooks.filter(book => book._id !== id));
-        alert("Book is deleted successfully!");
-      } else {
-        console.error('Failed to delete book');
-        alert("Failed to delete book. Please try again.");
-      }
-    })
-    .catch(err => {
-      console.error('Error deleting book:', err);
-      alert("Error deleting book. Please try again.");
-    });
+      .then((response) => {
+        if (response.ok) {
+          setAllBooks(allBooks.filter((book) => book._id !== id));
+          alert("Book is deleted successfully!");
+        } else {
+          console.error("Failed to delete book");
+          alert("Failed to delete book. Please try again.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error deleting book:", err);
+        alert("Error deleting book. Please try again.");
+      });
   };
 
   return (

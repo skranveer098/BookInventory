@@ -6,7 +6,9 @@ const FavouriteBooks = ()=> {
     const [books,setBooks]=useState([]);
 
     useEffect( ()=>{
-        fetch("http://localhost:5000/api/all-books").then(res=>res.json()).then(data=>setBooks(data.slice(0,8)))
+        fetch("https://inventory-management-six-zeta.vercel.app/api/all-books")
+          .then((res) => res.json())
+          .then((data) => setBooks(data.slice(0, 8)));
     },[])
   return (
     <div>

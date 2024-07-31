@@ -48,16 +48,18 @@ const EditBooks = () => {
     };
 
     //update book data
-    fetch(`http://localhost:5000/api/book/${id}`, {
+    fetch(`https://inventory-management-six-zeta.vercel.app/api/book/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(updateBookObj)
-    }).then(res => res.json()).then(data => {
-      alert("Book is updated!!")
-      form.reset();
+      body: JSON.stringify(updateBookObj),
     })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Book is updated!!");
+        form.reset();
+      });
     
   };
 

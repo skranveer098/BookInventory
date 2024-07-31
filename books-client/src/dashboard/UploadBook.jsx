@@ -44,18 +44,18 @@ const UploadBook = () => {
 
     console.log(bookObj);
 
-    fetch('http://localhost:5000/api/upload-book', {
+    fetch("https://inventory-management-six-zeta.vercel.app/api/upload-book", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(bookObj)
+      body: JSON.stringify(bookObj),
     })
-    .then(res => res.json())
-    .then(data => {
-      alert("Book uploaded successfully!!!");
-      form.reset();
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Book uploaded successfully!!!");
+        form.reset();
+      });
   };
 
   return (
