@@ -35,7 +35,6 @@ const Dashboard = () => {
   };
 
   const headerStyle = {
-    // backgroundColor: "#4a90e2",
     color: "black",
     padding: "24px",
     borderRadius: "8px",
