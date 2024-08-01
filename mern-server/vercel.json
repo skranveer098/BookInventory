@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "CRM",
+  "name": "InventoryManagemnet",
   "builds": [
     {
       "src": "app.js",
