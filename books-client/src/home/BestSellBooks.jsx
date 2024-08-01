@@ -6,7 +6,7 @@ const FavouriteBooks = ()=> {
     const [books,setBooks]=useState([]);
 
     useEffect( ()=>{
-        fetch("https://inventory-management-six-zeta.vercel.app/api/all-books")
+        fetch("https://book-inventory-kappa.vercel.app/api/all-books")
           .then((res) => res.json())
           .then((data) => setBooks(data.slice(0, 8)));
     },[])

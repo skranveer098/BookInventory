@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <SingleBook />,
         loader: ({ params }) =>
           fetch(
-            `https://inventory-management-six-zeta.vercel.app/api/book/${params.id}`
+            `https://book-inventory-kappa.vercel.app/api/book/${params.id}`
           ),
       },
     ],
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         element: <EditBooks />,
         loader: ({ params }) =>
           fetch(
-            `https://inventory-management-six-zeta.vercel.app/api/book/${params.id}`
+            `https://book-inventory-kappa.vercel.app/api/book/${params.id}`
           ),
       },
     ],

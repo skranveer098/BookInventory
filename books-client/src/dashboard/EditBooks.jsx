@@ -48,7 +48,7 @@ const EditBooks = () => {
     };
 
     //update book data
-    fetch(`https://inventory-management-six-zeta.vercel.app/api/book/${id}`, {
+    fetch(`https://book-inventory-kappa.vercel.app/api/book/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
