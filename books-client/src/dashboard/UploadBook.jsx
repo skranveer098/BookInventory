@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Button, Checkbox, Label, Select, TextInput, Textarea } from "flowbite-react";
+import {
+  Button,
+  Checkbox,
+  Label,
+  Select,
+  TextInput,
+  Textarea,
+} from "flowbite-react";
 
 const UploadBook = () => {
   const bookCategories = [
@@ -19,10 +26,12 @@ const UploadBook = () => {
     "Children Books",
     "Travel",
     "Religion",
-    "Art and Design"
+    "Art and Design",
   ];
 
-  const [selectedBookCategory, setSelectedBookCategory] = useState(bookCategories[0]);
+  const [selectedBookCategory, setSelectedBookCategory] = useState(
+    bookCategories[0]
+  );
 
   const handleChangeSelectedValue = (e) => {
     setSelectedBookCategory(e.target.value);
@@ -39,7 +48,12 @@ const UploadBook = () => {
     const category = form.categoryName.value;
 
     const bookObj = {
-      bookTitle, authorName, bookDescription, bookPDFURL, imageURL, category
+      bookTitle,
+      authorName,
+      bookDescription,
+      bookPDFURL,
+      imageURL,
+      category,
     };
 
     console.log(bookObj);
@@ -60,12 +74,18 @@ const UploadBook = () => {
 
   return (
     <div className="px-4 my-12 w-full">
-      <h2 className="mb-8 text-3xl font-bold text-center text-blue-600">Upload A Book</h2>
+      <h2 className="mb-8 text-3xl font-bold text-center text-blue-600">
+        Upload A Book
+      </h2>
       <form onSubmit={handleBookSubmit} className="flex flex-col gap-4 w-full">
         <div className="flex gap-8 w-full">
           <div className="w-full">
             <div className="mb-2 block">
-              <Label htmlFor="bookTitle" value="Book Title" className="text-purple-600"/>
+              <Label
+                htmlFor="bookTitle"
+                value="Book Title"
+                className="text-purple-600"
+              />
             </div>
             <TextInput
               id="bookTitle"
@@ -78,7 +98,11 @@ const UploadBook = () => {
           </div>
           <div className="w-full">
             <div className="mb-2 block">
-              <Label htmlFor="authorName" value="Author Name" className="text-green-600"/>
+              <Label
+                htmlFor="authorName"
+                value="Author Name"
+                className="text-green-600"
+              />
             </div>
             <TextInput
               id="authorName"
@@ -93,7 +117,11 @@ const UploadBook = () => {
         <div className="flex gap-8 w-full">
           <div className="w-full">
             <div className="mb-2 block">
-              <Label htmlFor="inputState" value="Book Category" className="text-orange-600"/>
+              <Label
+                htmlFor="inputState"
+                value="Book Category"
+                className="text-orange-600"
+              />
             </div>
             <Select
               id="inputState"
@@ -111,7 +139,11 @@ const UploadBook = () => {
           </div>
           <div className="w-full">
             <div className="mb-2 block">
-              <Label htmlFor="imageURL" value="Book Image URL" className="text-red-600"/>
+              <Label
+                htmlFor="imageURL"
+                value="Book Image URL"
+                className="text-red-600"
+              />
             </div>
             <TextInput
               id="imageURL"
@@ -125,7 +157,11 @@ const UploadBook = () => {
         </div>
         <div className="w-full">
           <div className="mb-2 block">
-            <Label htmlFor="bookDescription" value="Book Description" className="text-blue-600"/>
+            <Label
+              htmlFor="bookDescription"
+              value="Book Description"
+              className="text-blue-600"
+            />
           </div>
           <Textarea
             id="bookDescription"
@@ -138,7 +174,11 @@ const UploadBook = () => {
         </div>
         <div className="w-full">
           <div className="mb-2 block">
-            <Label htmlFor="bookPDFURL" value="Book PDF URL" className="text-purple-600"/>
+            <Label
+              htmlFor="bookPDFURL"
+              value="Book PDF URL"
+              className="text-purple-600"
+            />
           </div>
           <TextInput
             id="bookPDFURL"
@@ -149,7 +189,10 @@ const UploadBook = () => {
             className="border-2 border-purple-600"
           />
         </div>
-        <Button type="submit" className="mt-5 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl">
+        <Button
+          type="submit"
+          className="mt-5 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl"
+        >
           Upload Book
         </Button>
       </form>

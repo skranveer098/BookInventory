@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Table } from "flowbite-react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const ManageBooks = () => {
 
   // Delete a book
   const handleDelete = (id) => {
-    console.log('Deleting book with ID:', id); // Debugging line
+    console.log("Deleting book with ID:", id); // Debugging line
     fetch(`https://book-inventory-kappa.vercel.app/api/book/${id}`, {
       method: "DELETE",
     })
@@ -37,12 +37,12 @@ const ManageBooks = () => {
   };
 
   return (
-    <div className='px-4 my-12'>
-      <h2 className='mb-8 text-3xl font-bold text-center text-purple-700'>
+    <div className="px-4 my-12">
+      <h2 className="mb-8 text-3xl font-bold text-center text-purple-700">
         Manage Your Books
       </h2>
-      <Table className='lg:w-[1000px] mx-auto '>
-        <Table.Head className='bg-gradient-to-r from-blue-500 to-indigo-600 text-white'>
+      <Table className="lg:w-[1000px] mx-auto ">
+        <Table.Head className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
           <Table.HeadCell>No.</Table.HeadCell>
           <Table.HeadCell>Book Name</Table.HeadCell>
           <Table.HeadCell>Author Name</Table.HeadCell>
@@ -52,9 +52,12 @@ const ManageBooks = () => {
             <span>Edit or Manage</span>
           </Table.HeadCell>
         </Table.Head>
-        <Table.Body className='divide-y'>
+        <Table.Body className="divide-y">
           {allBooks.map((book, index) => (
-            <Table.Row key={book._id} className="bg-white hover:bg-gray-50 transition-colors duration-300">
+            <Table.Row
+              key={book._id}
+              className="bg-white hover:bg-gray-50 transition-colors duration-300"
+            >
               <Table.Cell className="whitespace-nowrap font-medium text-gray-900">
                 {index + 1}
               </Table.Cell>
@@ -79,7 +82,7 @@ const ManageBooks = () => {
                 </Link>
                 <button
                   onClick={() => handleDelete(book._id)}
-                  className='bg-red-600 px-4 py-2 font-semibold text-white rounded-md hover:bg-red-700 transition-colors duration-300'
+                  className="bg-red-600 px-4 py-2 font-semibold text-white rounded-md hover:bg-red-700 transition-colors duration-300"
                 >
                   Delete
                 </button>
@@ -90,6 +93,6 @@ const ManageBooks = () => {
       </Table>
     </div>
   );
-}
+};
 
 export default ManageBooks;
