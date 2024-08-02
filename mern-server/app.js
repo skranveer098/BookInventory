@@ -7,12 +7,16 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const allowedOrigins = ['https://book-inventory-j3sf.vercel.app'];
+app.use(cors({
+  origin: allowedOrigins,
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB connection
 const uri = "mongodb+srv://mernbookinventory:Za1xcZtCsENbshbN@cluster0.smbra6s.mongodb.net/BookInventory?retryWrites=true&w=majority";
-
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -28,5 +32,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server listening on port ${port}`);
 });

@@ -1,29 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { FaBars, FaTimes } from "react-icons/fa";
-// import SideBar from "./Sidebar"; // Import the Sidebar component
 
  const Dashboard = () => {
-//   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Toggle sidebar visibility
-  // const toggleSidebar = () => {
-  //   setIsSidebarOpen(!isSidebarOpen);
-  // };
-
-  // Close sidebar when clicking outside
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (
-  //       !document.getElementById("sidebar")?.contains(event.target) &&
-  //       !document.getElementById("menuButton")?.contains(event.target)
-  //     ) {
-  //       setIsSidebarOpen(false);
-  //     }
-  //   };
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => document.removeEventListener("mousedown", handleClickOutside);
-  // }, []);
 
   const containerStyle = {
     display: "flex",
@@ -56,24 +34,7 @@ import React, { useState, useEffect } from "react";
   };
 
   const sidebarStyle = {
-    // backgroundColor: "#ffffff",
-    // borderRadius: "8px",
-    // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    // padding: "16px",
-    // position: "fixed",
-    // top: "0",
-    // left: "0",
-    // height: "100%",
-    // width: "250px",
-    // transform: isSidebarOpen ? "translateX(0)" : "translateX(-100%)",
-    // transition: "transform 0.3s ease",
-    // zIndex: 1000, // Ensure it's below the hamburger button
-    // overflowY: "auto",
-    // display: "block", // Always block for small screens
-    // "@media (min-width: 768px)": {
-    //   // For larger screens
-    //   display: "none",
-    // },
+   
   };
 
   const mainContentStyle = {

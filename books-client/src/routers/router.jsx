@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App.jsx";
 import Home from "../home/House.jsx";
-import Blog from "../components/Blog";
+// import Blog from "../components/Blog";
 import About from "../components/About";
 import Shop from "../shop/Shop";
 import SingleBook from "../shop/SingleBook";
@@ -9,7 +9,7 @@ import DashboardLayout from "../dashboard/DashboardLayout.jsx";
 import Dashboard from "../dashboard/Dashboard.jsx";
 import EditBooks from "../dashboard/EditBooks.jsx";
 import ManageBooks from "../dashboard/ManageBooks.jsx";
-import Sidebar from "../dashboard/Sidebar.jsx";
+// import Sidebar from "../dashboard/Sidebar.jsx";
 import UploadBook from "../dashboard/UploadBook.jsx";
 import Signup from "../components/Signup.jsx";
 import Login from "../components/Login.jsx";
