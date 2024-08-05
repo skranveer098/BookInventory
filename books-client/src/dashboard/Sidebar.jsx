@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Sidebar } from "flowbite-react";
+import { Link } from "react-router-dom";
 import {
   HiArrowSmRight,
   HiChartPie,
@@ -30,36 +31,42 @@ const SideBar = () => {
         </div>
         <Sidebar.Items className="mt-6 overflow-auto">
           <Sidebar.ItemGroup>
-            <Sidebar.Item
-              href="/admin/dashboard"
+          <Sidebar.Item
+              as={Link}
+              to="/admin/dashboard"
               icon={HiChartPie}
               className="hover:bg-indigo-600"
             >
+            
               Dashboard
             </Sidebar.Item>
             <Sidebar.Item
-              href="/admin/dashboard/upload"
+              as={Link}
+              to="/admin/dashboard/upload"
               icon={HiOutlineCloudUpload}
               className="hover:bg-purple-600"
             >
               Upload Book
             </Sidebar.Item>
             <Sidebar.Item
-              href="/admin/dashboard/manage"
+              as={Link}
+              to="/admin/dashboard/manage"
               icon={HiInbox}
               className="hover:bg-pink-600"
             >
               Manage Books
             </Sidebar.Item>
             <Sidebar.Item
-              href="/login"
+              as={Link}
+              to="/login"
               icon={HiArrowSmRight}
               className="hover:bg-pink-600"
             >
               Sign In
             </Sidebar.Item>
             <Sidebar.Item
-              href="/logout"
+              as={Link}
+              to="/logout"
               icon={HiTable}
               className="hover:bg-indigo-600"
             >
